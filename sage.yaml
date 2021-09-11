@@ -1,0 +1,12 @@
+name: nvme-temp
+namespace: system
+version: "0.1.8"
+description: Reads temperature from smart controller and reports.  Has to be run with privileged and /dev volume mount in order to read nvme
+
+source:
+    architectures:
+        - linux/amd64
+        - linux/arm64
+    url: https://github.com/ericvh/plugin-nvme-temp
+    branch: main
+

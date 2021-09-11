@@ -1,0 +1,13 @@
+include:
+  - project: 'ericvh/gitlab-ci-arm-template'
+    file: '/.gitlab-ci.yml'
+
+variables:
+  CI_BUILDX_ARCHS: "linux/amd64,linux/arm64"
+
+helm:
+  image: alpine/k8s:1.21.2
+  stage: deploy
+  script:
+    - helm package helm
+    - helmpkg=chart=@`echo *.tgz` && curl --request POST --user gitlab-ci-token:$CI_JOB_TOKEN --form $helmpkg "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/api/stable/charts"
