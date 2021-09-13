@@ -16,9 +16,8 @@ mqttbrokerhost = os.getenv("MQTT_BROKER_HOST")
 
 plugin.init()
 
-n = Device(nvmedev)
-
 while True:
+    n = Device(nvmedev)
     print("publishing value", n.temperature)
     plugin.publish("sys.nvme.temperature", n.temperature)
     if mqttbrokerhost: 
