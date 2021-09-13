@@ -4,7 +4,7 @@
 kind: DaemonSet
 
 image:
-  repository: registry.gitlab.com/ericvh/plugin-nvme-temp
+  repository: registry.gitlab.com/arm-research/smarter/edge-workloads/plugin-nvme-temp
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
