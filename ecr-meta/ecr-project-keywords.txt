@@ -1,7 +1,0 @@
-<ccs2012>
-<concept>
-<concept_id>10010583.10010737.10010739</concept_id>
-<concept_desc>Hardware~Board- and system-level test</concept_desc>
-<concept_significance>500</concept_significance>
-</concept>
-</ccs2012>
