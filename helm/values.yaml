@@ -68,7 +68,7 @@ autoscaling:
 #  targetMemoryUtilizationPercentage: 80
 
 nodeSelector:
-  resource.nvme: true
+  resource.nvme : true
 
 tolerations: []
 
