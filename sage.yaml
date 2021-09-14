@@ -1,6 +1,6 @@
 name: nvme-temp
 namespace: system
-version: "0.1.9"
+version: "0.1.10"
 description: Reads temperature from smart controller and reports.  Has to be run with privileged and /dev volume mount in order to read nvme
 
 source:

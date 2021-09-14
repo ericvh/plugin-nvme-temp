@@ -67,7 +67,8 @@ autoscaling:
 #  targetCPUUtilizationPercentage: 80
 #  targetMemoryUtilizationPercentage: 80
 
-nodeSelector: {}
+nodeSelector:
+  resource.nvme: true
 
 tolerations: []
 
@@ -88,7 +89,7 @@ env:
   - name: NVME_DEVICE
     value: "/dev/nvme0"
   - name: POLL_PERIOD
-    value: "5"
+    value: "60"
   - name: WAGGLE_PLUGIN_HOST
     value: wes-rabbitmq
   - name: WAGGLE_PLUGIN_PORT
